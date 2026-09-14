@@ -1,0 +1,45 @@
+# Local worktrees
+.worktrees/
+
+# Documentation
+docs/
+PORTFOLIO_CONTENT.md
+PORTFOLIO_WEBSITE_CONTENT.md
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Dependencies & build output
+.playwright-mcp/
+node_modules/
+dist/
+build/
+coverage/
+*.tsbuildinfo
+
+# Next.js
+.next/
+out/
+
+# Logs & runtime data
+*.log
+npm-debug.log*
+/data/
+/uploads/
+
+# Testing
+playwright-report/
+test-results/
+
+# OS & editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+docker-compose.override.yml

@@ -1,0 +1,36 @@
+{
+  "name": "lpi-tracking-system",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @lpi/web --",
+    "dev:api": "npm run dev -w @lpi/api",
+    "build": "npm run build -w @lpi/web",
+    "build:api": "npm run build -w @lpi/api",
+    "start": "npm run start -w @lpi/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:report:generate": "npm run db:setup && playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:headed": "playwright test --headed",
+    "test:e2e:report": "playwright show-report",
+    "db:generate": "npm run db:generate -w @lpi/database",
+    "db:migrate": "npm run db:migrate -w @lpi/database",
+    "db:seed": "npm run db:seed -w @lpi/database",
+    "db:setup": "npm run db:setup -w @lpi/database"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^22",
+    "eslint": "^9.39.2",
+    "typescript": "5.7.3",
+    "vitest": "^3.2.4"
+  }
+}

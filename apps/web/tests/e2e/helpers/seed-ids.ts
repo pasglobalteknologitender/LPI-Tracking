@@ -1,0 +1,4 @@
+export const SEED_SHIPMENT_IDS = {
+  synced: '00000000-0000-4000-8000-000000000010',
+  unsynced: '00000000-0000-4000-8000-000000000011',
+} as const;
